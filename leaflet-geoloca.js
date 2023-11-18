@@ -1,3 +1,6 @@
+// geolocalización
+map.locate({ setView: true, maxZoom: 16 });
+
 //añadimos un circulo  si funciona la geolocolización
 function onLocationFound(e) {
     var radius = e.accuracy;
