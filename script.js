@@ -22,7 +22,7 @@ L.marker([40.03687, -3.60803]).addTo(map)
 //.openPopup();
     
     // insertando una imagen
-    var imageUrl = 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Logo_de_Patrimonio_Nacional.svg/1200px-Logo_de_Patrimonio_Nacional.svg.png',
+    var imageUrl = './images/explorador.png',
     imageBounds = [[40.04259, -3.61225], [40.04146, -3.60919]];
 L.imageOverlay(imageUrl, imageBounds).addTo(map);
 
