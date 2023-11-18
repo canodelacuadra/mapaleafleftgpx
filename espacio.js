@@ -59,7 +59,7 @@ var polygon = L.polygon([
 ], {
     color: '#A19861',
     fillColor: 'red',
-    fillOpacity: 0.2,
+    fillOpacity: 0.3,
     radius: 500
 }).addTo(map)
 

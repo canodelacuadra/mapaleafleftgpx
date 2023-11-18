@@ -23,8 +23,7 @@ let markerEspina=L.marker([40.03806, -3.60925], {
      icon:	new L.NumberedDivIcon({number: '4'})
 }).addTo(map)
     .bindPopup('<a href="fuentenino.html">Fuente del Niño de la Espina</a>');
-//.openPopup();
-    
+//.openPopup();  
     // insertando una imagen
     var imageUrl = './images/explorador.png',
     imageBounds = [[40.0427,-3.6124], [40.0413, -3.61]];

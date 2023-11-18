@@ -15,7 +15,7 @@
 
 .leaflet-popup-content-wrapper,
 .leaflet-popup-tip {
-	background-color: #A19861;
+	background-color: rgba(161, 151, 99, 1);
 }
 
 .leaflet-popup-content-wrapper a {
