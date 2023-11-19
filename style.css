@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "CinzelDecorative";
+    src: url("fonts/Cinzel_Decorative/CinzelDecorative-Regular.ttf");
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -22,16 +27,20 @@ body {
 }
 
 h1 {
+    font-family: "CinzelDecorative";
     position: absolute;
 
-    padding: .5em;
-    top: 10px;
-    left: 50vh;
+    padding: .2em;
+    top: 100px;
+    left: 2vh;
     z-index: 10000;
     background-color: rgba(255, 255, 255, .5);
     border: solid 1px #666;
     box-shadow: 1px 1px 3px #666;
-
+    writing-mode: vertical-rl;
+    text-orientation: sideways;
+    text-transform: uppercase;
+    font-size: 3vw
 }
 
 .legend {
