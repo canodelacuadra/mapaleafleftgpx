@@ -1,4 +1,5 @@
-// geolocalización
+function geolocalizacion() {
+    // geolocalización
 map.locate({ setView: true, maxZoom: 16 });
 
 //añadimos un circulo  si funciona la geolocolización
@@ -17,3 +18,8 @@ function onLocationError(e) {
 }
 
 map.on('locationerror', onLocationError);
+    
+}
+document.getElementById('btn-geo').addEventListener('click', function () {
+    geolocalizacion();
+})

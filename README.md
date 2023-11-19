@@ -1,10 +1,21 @@
-# mapaleafleftgpx
-Plugin leafleft
-## calcular ruta
-https://danisanchez.net/calcular-rutas-con-openstreetmap-partiendo-de-la-geolocalizacion-del-usuario/
+# Mapa interactivo con OpenStreetMaps y el plugin Leafleft
+[https://www.openstreetmap.org/#map=16/40.0427/-3.6124](https://www.openstreetmap.org/#map=16/40.0427/-3.6124)
+
+El mapa lo he hecho sobre el **Jardín de la Isla** en Aranjuez.
+Esta sería su url pública en Github Pages: [https://canodelacuadra.github.io/mapaleafleftgpx/](https://canodelacuadra.github.io/mapaleafleftgpx/)
+
+## Plugin leafleft
+Leaflet es una biblioteca JavaScript de código abierto que se utiliza para crear aplicaciones de mapas web. Lanzado por primera vez en 2011, es compatible con la mayoría de las plataformas móviles y de escritorio, y admite HTML5 y CSS3. Entre sus usuarios se encuentran FourSquare, Pinterest y Flickr
+[https://leafletjs.com/](https://leafletjs.com/)
 
 ## Marcadores numerados
-http://blog.charliecroom.com/index.php/web/numbered-markers-in-leaflet
-https://gist.github.com/comp615/2288108
-## geojson
-GeoJSON es un formato para codificar una variedad de estructuras de datos geográficos […]. Un objeto GeoJSON puede representar una región del espacio (una Geometría), una entidad delimitada espacialmente (una Característica) o una lista de Características (una Colección de Características). GeoJSON admite los siguientes tipos de geometría: Punto, LineString, Polígono, MultiPoint, MultiLineString, MultiPolygon y GeometryCollection. Las funciones en GeoJSON contienen un objeto Geometry y propiedades adicionales, y una FeatureCollection contiene una lista de funciones.
+La idea la he cogido de stackoverflow:
+[https://stackoverflow.com/questions/22622393/leaflet-awesome-markers-adding-numbers](https://stackoverflow.com/questions/22622393/leaflet-awesome-markers-adding-numbers)
+
+Y este sería el gist de github que he utilizado adaptándolo un poco:
+[https://gist.github.com/comp615/2288108](https://gist.github.com/comp615/2288108)
+
+## Geolocalización 
+La geolocalización solo lo activamos opcionalmente  porque si estás lejos o en zona wifi puede hacer extraños. Funciona bien estando cerca del jardín y con el moodo datos del móvil.
+Tutorial Leaflet [https://leafletjs.com/examples/mobile/](https://leafletjs.com/examples/mobile/)
+

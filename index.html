@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mapa Interactivo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
     crossorigin=""/> 
@@ -15,15 +16,20 @@
 <body>
 <div class="container">
     <div id="map"></div>
+    <button id ='btn-geo'type="button">Activar Gelolocalización</button>
     <h1 class="text-center">Jardín de la Isla - Aranjuez</h1>
     <div class="legend">
-        <h2><img src="images/marker-hole.png" alt="Puntos">Puntos de interés</h2>
+         <!--   <h2><img src="images/marker-hole.png" alt="Puntos"></h2> -->
+        <img class="close" width='25'src="images/arrow-up-long-solid.svg" alt="">
+        
         <ol>
             <li><a href="#" onclick="markerAcceso.fire('click')">Acceso desde el Jardín de la Reina</a></li>
             <li><a href="#" onclick="markerBoticaria.fire('click')">Fuente de la Boticaria</a></li>
             <li><a href="#" onclick="markerReyes.fire('click')">Salón de los Reyes Católicos</a></li>
              <li><a href="#" onclick="markerEspina.fire('click')">Fuente del Niño de la Espina</a></li>
         </ol>
+     
+       		
     </div>
       <!-- Make sure you put this AFTER Leaflet's CSS -->
       <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
@@ -32,8 +38,10 @@
       <script src="leaflet-numbered-markers.js"></script>
       <script src="script.js"></script>
       <script src="espacio.js"></script>
+              <!--  Hacemos collapse el legend-->
+      <script src="collapse.js"></script>
          <!--  Esto sería si queremos tener geolocalizacion -->
-     <!--  <script src="leaflet-geoloca.js"></script>  -->
+     <script src="leaflet-geoloca.js"></script>
 </div>
 
 

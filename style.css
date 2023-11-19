@@ -17,13 +17,32 @@ body {
 }
 
 #map {
-    height: 80vh;
+    height: 100vh;
     width: 100vw;
 }
 
+h1 {
+    position: absolute;
+
+    padding: .5em;
+    top: 10px;
+    left: 50vh;
+    z-index: 10000;
+    background-color: rgba(255, 255, 255, .5);
+    border: solid 1px #666;
+    box-shadow: 1px 1px 3px #666;
+
+}
+
 .legend {
-    background-color: rgb(254, 247, 247);
+    background-color: rgba(255, 255, 255, .5);
+    border: solid 1px #666;
+    box-shadow: 1px 1px 3px #666;
     padding: 1em;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 .legend h2 img {
@@ -35,11 +54,13 @@ body {
     padding: .5em 2em;
     columns: auto;
     columns: 2;
-    background-color: #a19861;
+    display: none;
+
 }
 
 .legend li {
-    color: white;
+    color: #333;
+    font-weight: bold;
 }
 
 .legend li a {
@@ -51,9 +72,19 @@ body {
 
 .legend li a:hover {
 
-    color: rgb(255, 255, 255);
+    color: rgb(50, 50, 50);
 }
 
 .text-center {
     text-align: center;
+}
+
+
+.close {
+    text-align: right;
+}
+
+.active,
+.close i:hover {
+    background-color: #ccc;
 }
