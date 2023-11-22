@@ -1,25 +1,38 @@
+let btnGeo = document.getElementById('btn-geo');
 function geolocalizacion() {
-    // geolocalización
-map.locate({ setView: true, maxZoom: 16 });
+    if(btnGeo.classList.contains( 'active' )){
+        btnGeo.textContent='Activar Geolocalización';
+        btnGeo.classList.remove('active');
+         // geolocalización anulada
+    map.stopLocate({setView: false, maxzoom: 16});
 
-//añadimos un circulo  si funciona la geolocolización
-function onLocationFound(e) {
+    }else{
+
+    // geolocalización
+    map.locate({ setView: true, maxZoom: 16 });
+    //añadimos un circulo  si funciona la geolocolización
+    function onLocationFound(e) {
     var radius = e.accuracy;
 
     L.marker(e.latlng).addTo(map)
         .bindPopup("Está usted a  " + radius + " metros de este punto").openPopup();
 
     L.circle(e.latlng, radius).addTo(map);
-}
-// Si la geolocalización falla
-map.on('locationfound', onLocationFound);
-function onLocationError(e) {
+   
+    }
+    // Si la geolocalización  falla
+    map.on('locationfound', onLocationFound);
+    function onLocationError(e) {
     alert(e.message);
+    }
+    // mostramos el error
+    map.on('locationerror', onLocationError);
+    // añadimos al boton la clase active para despues poder desactivarlo
+    btnGeo.classList.add('active'); 
+      btnGeo.textContent='Desactivar Geolocalización';
+    } 
 }
 
-map.on('locationerror', onLocationError);
-    
-}
-document.getElementById('btn-geo').addEventListener('click', function () {
+btnGeo.addEventListener('click', function () {
     geolocalizacion();
 })
