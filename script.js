@@ -29,3 +29,16 @@ let markerEspina=L.marker([40.03806, -3.60925], {
     imageBounds = [[40.0427,-3.6124], [40.0413, -3.61]];
 L.imageOverlay(imageUrl, imageBounds).addTo(map);
 
+//creamos un link desde la lista numerada del legend
+document.getElementById('acceso').addEventListener('click', function(){
+    markerAcceso.fire('click')
+})
+document.getElementById('boticaria').addEventListener('click', function(){
+    markerBoticaria.fire('click')
+})
+document.getElementById('salon').addEventListener('click', function(){
+    markerReyes.fire('click')
+})
+document.getElementById('espina').addEventListener('click', function(){
+    markerEspina.fire('click')
+})
